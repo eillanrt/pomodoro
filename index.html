@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pomodoro timer on the web" />
+    <meta name="og:description" content="Pomodoro timer on the web" />
+    <meta name="og:url" content="https://eillanrt.github.io/pomodoro-timer" />
+    <meta name="og:title" content="Pomodoro Timer" />
+    <meta name="twitter:title" content="Pomodoro Timer" />
+    <meta name="twitter:description" content="Pomodoro Timer on the web" />
+    <title>Pomodoro Timer</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/pomodoro/assets/apple-touch-icon-2a966be3.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABBtJREFUWEe1lm1MW1UYx//P7S2UF5FCloVMZUJRNmjB8EnDtNiqQUeQjM5EE2NijIlGI4myzWQJkriEjUwTvyzxy8KHaWzcHNuyDcpkI9uSzUVo58uGdG8wkWwwwdKV23se08uLFkt7G67n2+35///nd0+f89xDSDK2H33VCqE0Co58u7uxeyaZtu37NyxtdfvvJ9MkmqNUhu2HPTYGvCqjvfNl76Hl+o8ObdkimehNmeitTxu8Y6nyls+nBIgZtnU314PoGIDPOjZ7PwSBY7+3Hm7eQUS7QHito8F7oOWIZ51ZYCOzMMPE49fDpiHvVq+aDEoXgAZxxPMzGBuIeN9kUcH7hcGpfGHBKICMMFCcBd4DUANAXQL8laIqQ583ffcnMA+70tAPcLR5LwS1LAQFwRgCoUl7JgyCUQ2gh5l7IGigo8l7kVIsPm9NMiYqnLkzkqmRCA3hXNPTF9yWouGqDKjmeJukMh75VcHaW1Hk3xGQ5xiWWZ4oGFdPEKirxN97aiWYhAA/1NRkWxVrK4APADwYY7z9qIyL7iz8USwnRH7y2Czs5yMJ5wgYVAVayi77+lMW4Y2quooomw4CeCwmDj0g4dzmLIwXyyi6FsWa0SiiGQR/rQVrb0aRe0/g+kYzsv9iNH8xnWxDBZg7LwUKPt6KfwozbgeuVjurZSH3MVAQS7qfRQjaM7StLfw9vpinrRJON+Xgpf0zUGXCQGM2njkYgilpzWt8By75ra8vQiwBDNvq86TsuSGA1us9y6E8SZPmTAsombF/mWGeS+1m5t22QN+2uCIcqXLvBWOxylOnrEbBEAJcWxboO6/twGi5qzCSgVsAZa0mNx0vM/ptAV+dBvCb3fU2Ee1LJ8AALcsqV2oAQbv7GyZ4DAhNK4IZOzWAEbt7GARbWm5DxHycGB5T0DE1G+vphmSmEcJAkK5VO/OFkKfS8BknZUzT8BOb1khq5oRxqWklRWjc8XxOCCJ229H9ZUxrieTiyflT4HBPMmA1MFhXFAM/zp8Ch+sMQJt0uQwUMePLhT7gameinQZm64oisGceoOKFKjapg7pcBomIcdecG3p4qfBG7K6zIHrKoHw9MZ+U+n1tSwDBStdzLFGPHudqNQyMRSPhDeVXzs7EHb2gw/U1g15Z7QLJ/ASoEOLFksuntJeNA7hhr7UqsFyg//G7QEBrid+3ZxHyP83nZuWzpYpE/QA9ZOROaPcl5rbSQF/7v3MTdr9fqp3rM4XczYDdCAgCQgDeKfH7upbnrdh+b9fUZIeV/F0AvQsg8V1cBx0BJ1mi90oHe4cTyVP2/yt2Z7mZ5B0M9qRxZVMAnBRMnWWB3tMpilLHawC4a6vPm86ZqxdMTmZ2EGEdQPkL7ntgGmPin5hoQISV449f7b+jJ/lvGWl3Z//xSL8AAAAASUVORK5CYII="
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAdNJREFUOE+d089Lk3EcB/D35/s8kx1G6lgRQmzobroN8qZRD9vCSxFBC7p40X9ACBECKeigBynwInTrEhR4qAZWGx6SgujQ1FDYHgV/Io1Jlq72uOcdPuiYGtH2PX35fD+f1/cHn6+gatyfNvTiju/WvnKlxq4/yx8sDb1MRH//wsdHt18Uq3OP5nIyODCV8DaU8IEu3GDJ7lZKugmVIfFNU7tTI9eS29U1xwAioZnthcvTdzxPzFBDiy3YVYT73Mp+yb9YSge/WG+advYm/XMzFaQCmOGrMZAT+RYtmLnkRtEjKJzXoFtAV3IPgQXraOOfIIbb5lKPAdABspF4jyJe2QquH16FxrztJG8EdJxdL+O7T8G3WT52W4Jjwdn0Xfnc2elqtpqzAPx/e6R/xFimbYgZischeFdjsZNO4rnkQrFBERmtBwCwLrlIbFQog/UABC0xI7FhUB7UAwDYllxH9KYoNVkXQKTka7vhcWv6GoDGWhER6XX6YCkcvUeoh7UB/NQ66+1yABqGbhb01wL0/A8iwLJtqyvB+berlVZeDhju8hltXCB9AE59sgpMJIXsa51Pbx3ETiVmw9GLOlQ/CYOCC4eFawK8p+BpWyY1U33KP2EdolS2YKM1AAAAAElFTkSuQmCC"
+    />
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" crossorigin src="/pomodoro/assets/index-757d5640.js"></script>
+    <link rel="stylesheet" href="/pomodoro/assets/index-50629fd8.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <audio id="beep" preload="auto" src="./src/assets/beep.wav"></audio>
+    
+  </body>
+</html>
