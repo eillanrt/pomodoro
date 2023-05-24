@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Label from './Label'
 import Screen from './Screen'
 import accurateInterval from '../utils/accurateInterval.js'
 import clockify from '../utils/clockify.js'
 
 function Timer() {
-  const beep = document.getElementById('beep')
+  // const beep = document.getElementById('beep')
   const [time, setTime] = useState(1500),
     [sessionLength, setSessionLength] = useState(25),
     [breakLength, setBreakLength] = useState(5),
     [isRunning, setIsRunning] = useState(false),
     [interval, updateInterval] = useState(undefined),
     [status, setStatus] = useState('focus')
+
+  const audioRef = useRef(null)
 
   useEffect(() => {
     const body = document.body
@@ -34,7 +36,7 @@ function Timer() {
       sec--
       setTime(sec)
       if (sec === -1) {
-        beep.play()
+        audioRef.current.play()
         if (stats === 'focus') {
           setStatus('break')
           stats = 'break'
@@ -58,9 +60,9 @@ function Timer() {
   }
 
   const reset = () => {
-    if (!beep.paused) {
-      beep.pause()
-      beep.currentTime = 0
+    if (!audioRef.current.paused) {
+      audioRef.current.pause()
+      audioRef.current.currentTime = 0
     }
 
     if (interval) {
@@ -131,6 +133,12 @@ function Timer() {
           playPause={play_pause}
         />
       </div>
+      <audio
+        ref={audioRef}
+        id="beep"
+        preload="auto"
+        src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
+      ></audio>
     </div>
   )
 }
