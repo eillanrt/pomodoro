@@ -7,11 +7,3 @@ Each interval is known as a pomodoro, from the Italian word for tomato, after th
 -[WikiPedia](https://en.wikipedia.org/wiki/Pomodoro_Technique)
 
 ## [FreeCodeCamp Challenge](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-25--5-clock)
-
-### Dependencies
-
-- [React 17 / ReactDOM 17](https://reactjs.org/)
-- [Babel](https://babeljs.io/) (for JSX rendering)
-- [Font Awesome](https://fontawesome.com)
-- [Google Fonts](https://fonts.google.com)
-- [favicon.io](https://favicon.io)
