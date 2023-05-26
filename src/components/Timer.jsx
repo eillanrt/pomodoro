@@ -5,7 +5,6 @@ import accurateInterval from '../utils/accurateInterval.js'
 import clockify from '../utils/clockify.js'
 
 function Timer() {
-  // const beep = document.getElementById('beep')
   const [time, setTime] = useState(1500),
     [sessionLength, setSessionLength] = useState(25),
     [breakLength, setBreakLength] = useState(5),
