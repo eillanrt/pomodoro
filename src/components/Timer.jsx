@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Label from './Label'
 import Screen from './Screen'
 import accurateInterval from '../utils/accurateInterval.js'
@@ -26,6 +26,18 @@ function Timer() {
       timerWrapper.style.backgroundColor = '#2f4f4f'
     }
   }, [status])
+
+  useEffect(() => {
+    const preventUserOnLeave = (event) => {
+      event.returnValue = 'Changes that you made may not be saved.'
+    }
+
+    window.addEventListener('beforeunload', preventUserOnLeave)
+
+    return () => {
+      window.removeEventListener('beforeunload', preventUserOnLeave)
+    }
+  }, [isRunning])
 
   const play_pause = () => {
     let sec = time
